@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>09-常用标签二-表单控件</title>
+</head>
+<body>
+
+<!--radio、checkbox、checked-->
+<form action="https://www.baidu.com" method="get">
+    <p>
+        <label for="username">用户名:</label>
+        <input type="text" name="username" id="username" placeholder="请输入用户名">
+    </p>
+    <p>
+        <label for="password">密&nbsp;&nbsp;&nbsp码:</label>
+        <input type="password" name="password" id="password" placeholder="请输入密码">
+    </p>
+    <p>
+        <input type="submit" name="btn" value="提交" disabled>
+    </p>
+    <!--单选框radio:checked会被默认选中，产生互斥的效果，name值要相同-->
+    <p>
+        用户性别:
+        <input type="radio" name="sex" checked="" value="男">男
+        <input type="radio" name="sex" value="女">女
+        <input type="radio" name="sex" value="人妖">人妖
+    </p>
+    <!--复选框checkbox-->
+    <p>
+        <!--在前端尽量给name值取成一样的！-->
+        用户的爱好:
+        <input type="checkbox" name="hobby" value="吃">吃
+        <input type="checkbox" name="hobby" value="喝">喝
+        <input type="checkbox" name="hobby" value="玩">玩
+        <input type="checkbox" name="hobby" value="乐">乐
+        <input type="checkbox" name="hobby" value="其他">其他
+        <input type="checkbox" name="hobby" value="None">None
+    </p>
+    <p>
+        <!--<input type="file" name="textfile" disabled>-->
+        <input type="file" name="textfile">
+    </p>
+    <P>
+        <label for="textplace">下方是输入框:</label><br>
+        <!--注意textarea中的placeholder和textarea标签中的值的区别，一个是在文本域中的值，可以删除，另一个是在底部阴影部分显示，不可以删除！-->
+        <textarea name="textplace" id="textplace" cols="30" rows="10">请在这里输入自我介绍</textarea>
+        <textarea name="textplace" id="textplace1" cols="30" rows="10" placeholder="请在这里输入自我介绍"></textarea>
+    </P>
+    <!--下拉列表-->
+    <p>
+        <select name="cities" id="" size="3" multiple="multiple">
+            <option value="bj" selected="selected">北京</option>
+            <option value="sh" selected="selected">上海</option>
+            <option value="gz">广州</option>
+            <option value="sz">深圳</option>
+            <option value="hz">杭州</option>
+        </select>
+    </p>
+    <p>
+        <input type="reset" name="reset" value="重置">
+    </p>
+    <p>
+        <label for="sub"></label>
+        <input type="submit" name="btn" value="提交" id="sub">
+    </p>
+
+</form>
+</body>
+</html>
